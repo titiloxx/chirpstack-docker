@@ -1,0 +1,10 @@
+# Railway deployment configuration for ChirpStack
+[phases.setup]
+apt_pkgs = ["docker.io", "docker-compose"]
+
+[phases.build]
+cmds = ["echo 'Preparing ChirpStack services'"]
+
+[start]
+cmd = "docker-compose up"
+watch_file = "docker-compose.yml"
